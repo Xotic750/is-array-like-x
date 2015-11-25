@@ -21,7 +21,7 @@
  * </a>
  *
  * ES6 isArrayLike module.
- * @version 1.0.0
+ * @version 1.0.1
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -51,6 +51,11 @@
    *
    * @param {*} subject The object to be tested.
    * @return {boolean} Returns `true` if subject is array-like, else `false`.
+   * @example
+   * isArrayLike([1, 2, 3]); // true
+   * isArrayLike(document.body.children); // true
+   * isArrayLike('abc'); // true
+   * isArrayLike(_.noop); // false
    */
   module.exports = function (subject) {
     /*jshint eqnull:true */
