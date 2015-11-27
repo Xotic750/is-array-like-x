@@ -1,6 +1,6 @@
 {
     "name": "is-array-like-x",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "ES6 isArrayLike module.",
     "homepage": "https://github.com/Xotic750/is-array-like-x",
     "author": {
@@ -30,7 +30,7 @@
     },
     "dependencies": {
       "is-callable": "^1.1.0",
-      "is-length-x": "^1.0.0"
+      "is-length-x": "^1.0.2"
     },
     "devDependencies": {
       "es5-shim": "^4.3.1",

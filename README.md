@@ -22,7 +22,7 @@ alt="npm version" height="18">
 
 ES6 isArrayLike module.
 
-**Version**: 1.0.1  
+**Version**: 1.0.2  
 **Author:** Xotic750 <Xotic750@gmail.com>  
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
@@ -36,6 +36,8 @@ equal to 0 and less than or equal to `Number.MAX_SAFE_INTEGER`.
 **Returns**: <code>boolean</code> - Returns `true` if subject is array-like, else `false`.  
 **Example**  
 ```js
+var isArrayLike = require('is-array-like-x');
+
 isArrayLike([1, 2, 3]); // true
 isArrayLike(document.body.children); // true
 isArrayLike('abc'); // true

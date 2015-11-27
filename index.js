@@ -21,7 +21,7 @@
  * </a>
  *
  * ES6 isArrayLike module.
- * @version 1.0.1
+ * @version 1.0.2
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -52,6 +52,8 @@
    * @param {*} subject The object to be tested.
    * @return {boolean} Returns `true` if subject is array-like, else `false`.
    * @example
+   * var isArrayLike = require('is-array-like-x');
+   *
    * isArrayLike([1, 2, 3]); // true
    * isArrayLike(document.body.children); // true
    * isArrayLike('abc'); // true
