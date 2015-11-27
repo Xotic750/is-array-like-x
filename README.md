@@ -34,6 +34,11 @@ equal to 0 and less than or equal to `Number.MAX_SAFE_INTEGER`.
 
 **Kind**: Exported function  
 **Returns**: <code>boolean</code> - Returns `true` if subject is array-like, else `false`.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| subject | <code>\*</code> | The object to be tested. |
+
 **Example**  
 ```js
 var isArrayLike = require('is-array-like-x');

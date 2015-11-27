@@ -43,7 +43,7 @@
     "scripts": {
       "test": "jasmine-node --matchall tests/spec/",
       "style": "jscs index.js",
-      "docs": "jsdoc2md --name-format code --module-index-format dl --param-list-format --example-lang js table index.js > README.md",
+      "docs": "jsdoc2md --name-format code --example-lang js table index.js > README.md",
       "build": "browserify -e index.js -o lib/is-array-like-x.js -u 'crypto' -s returnExports",
       "build-uglify": "uglifyjs lib/is-array-like-x.js -o lib/is-array-like-x.min.js --compress unused=false,dead_code=false --keep-fnames --mangle --beautify ascii_only=true,beautify=false --source-map lib/is-array-like-x.map"
     }
