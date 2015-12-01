@@ -21,7 +21,7 @@
  * </a>
  *
  * ES6 isArrayLike module.
- * @version 1.0.2
+ * @version 1.0.3
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -41,7 +41,7 @@
 ;(function () {
   'use strict';
 
-  var isCallable = require('is-callable'),
+  var ES = require('es-abstract'),
     isLength = require('is-length-x');
 
   /**
@@ -59,8 +59,10 @@
    * isArrayLike('abc'); // true
    * isArrayLike(_.noop); // false
    */
-  module.exports = function (subject) {
+  module.exports = function isArrayLike(subject) {
     /*jshint eqnull:true */
-    return subject != null && !isCallable(subject) && isLength(subject.length);
+    return subject != null &&
+      !ES.IsCallable(subject) &&
+      isLength(subject.length);
   };
 }());
