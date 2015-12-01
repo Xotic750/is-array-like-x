@@ -29,22 +29,22 @@
         "url": "https://github.com/Xotic750/is-array-like-x/issues"
     },
     "dependencies": {
-      "is-callable": "^1.1.0",
-      "is-length-x": "^1.0.2"
+        "is-callable": "^1.1.0",
+        "is-length-x": "^1.0.3"
     },
     "devDependencies": {
-      "es5-shim": "^4.3.1",
-      "jscs": "^2.5.1",
-      "uglify-js": "^2.6.1",
-      "browserify": "12.0.1",
-      "jasmine-node": "^1.14.5",
-      "jsdoc-to-markdown": "^1.2.1"
+        "es5-shim": "^4.3.1",
+        "jscs": "^2.5.1",
+        "uglify-js": "^2.6.1",
+        "browserify": "12.0.1",
+        "jasmine-node": "^1.14.5",
+        "jsdoc-to-markdown": "^1.2.1"
     },
     "scripts": {
-      "test": "jasmine-node --matchall tests/spec/",
-      "style": "jscs index.js",
-      "docs": "jsdoc2md --name-format code --example-lang js table index.js > README.md",
-      "build": "browserify -e index.js -o lib/is-array-like-x.js -u 'crypto' -s returnExports",
-      "build-uglify": "uglifyjs lib/is-array-like-x.js -o lib/is-array-like-x.min.js --compress unused=false,dead_code=false --keep-fnames --mangle --beautify ascii_only=true,beautify=false --source-map lib/is-array-like-x.map"
+        "test": "jasmine-node --matchall tests/spec/",
+        "style": "jscs index.js",
+        "docs": "jsdoc2md --name-format code --example-lang js table index.js > README.md",
+        "build": "browserify -e index.js -o lib/is-array-like-x.js -u 'crypto' -s returnExports",
+        "build-uglify": "uglifyjs lib/is-array-like-x.js -o lib/is-array-like-x.min.js --compress unused=false,dead_code=false --keep-fnames --mangle --beautify ascii_only=true,beautify=false --source-map lib/is-array-like-x.map"
     }
 }
