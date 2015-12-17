@@ -21,7 +21,25 @@
  * </a>
  *
  * ES6 isArrayLike module.
- * @version 1.0.3
+ *
+ * <h2>ECMAScript compatibility shims for legacy JavaScript engines</h2>
+ * `es5-shim.js` monkey-patches a JavaScript context to contain all EcmaScript 5
+ * methods that can be faithfully emulated with a legacy JavaScript engine.
+ *
+ * `es5-sham.js` monkey-patches other ES5 methods as closely as possible.
+ * For these methods, as closely as possible to ES5 is not very close.
+ * Many of these shams are intended only to allow code to be written to ES5
+ * without causing run-time errors in older engines. In many cases,
+ * this means that these shams cause many ES5 methods to silently fail.
+ * Decide carefully whether this is what you want. Note: es5-sham.js requires
+ * es5-shim.js to be able to work properly.
+ *
+ * `json3.js` monkey-patches the EcmaScript 5 JSON implimentation faithfully.
+ *
+ * `es6.shim.js` provides compatibility shims so that legacy JavaScript engines
+ * behave as closely as possible to ECMAScript 6 (Harmony).
+ *
+ * @version 1.0.4
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -42,7 +60,8 @@
   'use strict';
 
   var ES = require('es-abstract'),
-    isLength = require('is-length-x');
+    isLength = require('is-length-x'),
+    isNil = require('is-nil-x');
 
   /**
    * Checks if value is array-like. A value is considered array-like if it's
@@ -60,8 +79,7 @@
    * isArrayLike(_.noop); // false
    */
   module.exports = function isArrayLike(subject) {
-    /*jshint eqnull:true */
-    return subject != null &&
+    return !isNil(subject) &&
       !ES.IsCallable(subject) &&
       isLength(subject.length);
   };
