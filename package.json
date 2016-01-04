@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "es-abstract": "^1.4.3",
-    "is-length-x": "^1.0.3",
+    "is-length-x": "^1.0.5",
     "is-nil-x": "^1.0.1"
   },
   "devDependencies": {
