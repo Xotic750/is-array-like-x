@@ -39,7 +39,7 @@
  * `es6.shim.js` provides compatibility shims so that legacy JavaScript engines
  * behave as closely as possible to ECMAScript 6 (Harmony).
  *
- * @version 1.0.7
+ * @version 1.0.8
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -52,23 +52,23 @@
   freeze:true, futurehostile:true, latedef:true, newcap:true, nocomma:true,
   nonbsp:true, singleGroups:true, strict:true, undef:true, unused:true,
   es3:true, esnext:false, plusplus:true, maxparams:1, maxdepth:1,
-  maxstatements:2, maxcomplexity:1 */
+  maxstatements:4, maxcomplexity:1 */
 
 /*global module */
 
 ;(function () {
   'use strict';
 
-  var ES = require('es-abstract'),
-    isLength = require('is-length-x'),
-    isNil = require('is-nil-x');
+  var isNil = require('is-nil-x');
+  var isFunction = require('is-function-x');
+  var isLength = require('lodash.islength');
 
   /**
    * Checks if value is array-like. A value is considered array-like if it's
    * not a function and has a `length` that's an integer greater than or
    * equal to 0 and less than or equal to `Number.MAX_SAFE_INTEGER`.
    *
-   * @param {*} subject The object to be tested.
+   * @param {*} value The object to be tested.
    * @return {boolean} Returns `true` if subject is array-like, else `false`.
    * @example
    * var isArrayLike = require('is-array-like-x');
@@ -78,9 +78,7 @@
    * isArrayLike('abc'); // true
    * isArrayLike(_.noop); // false
    */
-  module.exports = function isArrayLike(subject) {
-    return !isNil(subject) &&
-      !ES.IsCallable(subject) &&
-      isLength(subject.length);
+  module.exports = function isArrayLike(value) {
+    return !isNil(value) && !isFunction(value) && isLength(value.length);
   };
 }());

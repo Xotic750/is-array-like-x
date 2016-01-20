@@ -39,12 +39,12 @@ es5-shim.js to be able to work properly.
 `es6.shim.js` provides compatibility shims so that legacy JavaScript engines
 behave as closely as possible to ECMAScript 6 (Harmony).
 
-**Version**: 1.0.7  
+**Version**: 1.0.8  
 **Author:** Xotic750 <Xotic750@gmail.com>  
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
 <a name="exp_module_is-array-like-x--module.exports"></a>
-### `module.exports(subject)` ⇒ <code>boolean</code> ⏏
+### `module.exports(value)` ⇒ <code>boolean</code> ⏏
 Checks if value is array-like. A value is considered array-like if it's
 not a function and has a `length` that's an integer greater than or
 equal to 0 and less than or equal to `Number.MAX_SAFE_INTEGER`.
@@ -54,7 +54,7 @@ equal to 0 and less than or equal to `Number.MAX_SAFE_INTEGER`.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| subject | <code>\*</code> | The object to be tested. |
+| value | <code>\*</code> | The object to be tested. |
 
 **Example**  
 ```js

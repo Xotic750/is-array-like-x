@@ -4,7 +4,7 @@
   freeze:true, futurehostile:true, latedef:true, newcap:true, nocomma:true,
   nonbsp:true, singleGroups:true, strict:true, undef:true, unused:true,
   es3:true, esnext:false, plusplus:true, maxparams:2, maxdepth:2,
-  maxstatements:11, maxcomplexity:3 */
+  maxstatements:23, maxcomplexity:4 */
 
 /*global JSON:true, expect, module, require, describe, it, returnExports */
 
@@ -32,10 +32,11 @@
             expected = values.map(function () {
               return true;
             }),
-                       actual = values.map(isArrayLike);
+            actual = values.map(isArrayLike);
         expect(actual).toEqual(expected);
       }(1, 2, 3));
     });
+
     it('should return `false` for non-arrays', function () {
       /*jshint elision:true */
       var falsey = [, '', 0, false, NaN, null, undefined],
@@ -61,6 +62,27 @@
       expect(isArrayLike({ 'a': 1 })).toBe(false);
       expect(isArrayLike(1)).toBe(false);
       expect(isArrayLike(/x/)).toBe(false);
+
+      var fat;
+      try {
+        /*jshint evil:true */
+        fat = new Function('return () => {return this;}');
+        expect(isArrayLike(fat)).toBe(false);
+      } catch (ignore) {}
+
+      var gen;
+      try {
+        /*jshint evil:true */
+        gen = new Function('return function* idMaker(){}');
+        expect(isArrayLike(gen)).toBe(false);
+      } catch (ignore) {}
+
+      var classes;
+      try {
+        /*jshint evil:true */
+        classes = new Function('"use strict"; return class MyClass {}');
+        expect(isArrayLike(classes)).toBe(false);
+      } catch (ignore) {}
     });
   });
 }());
