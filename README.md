@@ -1,4 +1,5 @@
 <a name="module_is-array-like-x"></a>
+
 ## is-array-like-x
 <a href="https://travis-ci.org/Xotic750/is-array-like-x"
 title="Travis status">
@@ -39,11 +40,12 @@ es5-shim.js to be able to work properly.
 `es6.shim.js` provides compatibility shims so that legacy JavaScript engines
 behave as closely as possible to ECMAScript 6 (Harmony).
 
-**Version**: 1.0.13  
-**Author:** Xotic750 <Xotic750@gmail.com>  
+**Version**: 1.1.0  
+**Author**: Xotic750 <Xotic750@gmail.com>  
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
 <a name="exp_module_is-array-like-x--module.exports"></a>
+
 ### `module.exports(value)` ⇒ <code>boolean</code> ⏏
 Checks if value is array-like. A value is considered array-like if it's
 not a function and has a `length` that's an integer greater than or
