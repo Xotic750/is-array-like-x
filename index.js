@@ -1,6 +1,6 @@
 /**
  * @file Determine if a value is array like.
- * @version 1.3.0
+ * @version 1.4.0
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -29,5 +29,5 @@ var isLength = require('lodash.islength');
  * isArrayLike(_.noop); // false
  */
 module.exports = function isArrayLike(value) {
-  return isNil(value) === false && isFunction(value) === false && isLength(value.length);
+  return isNil(value) === false && isFunction(value, true) === false && isLength(value.length);
 };
