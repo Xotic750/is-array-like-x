@@ -1,6 +1,6 @@
 /**
  * @file Determine if a value is array like.
- * @version 1.5.1
+ * @version 1.6.0
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -11,7 +11,7 @@
 
 var isNil = require('is-nil-x');
 var isFunction = require('is-function-x');
-var isLength = require('lodash.islength');
+var isLength = require('is-length-x');
 
 /**
  * Checks if value is array-like. A value is considered array-like if it's
