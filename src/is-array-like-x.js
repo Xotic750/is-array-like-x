@@ -7,11 +7,9 @@
  * @module is-array-like-x
  */
 
-'use strict';
-
-var isNil = require('is-nil-x');
-var isFunction = require('is-function-x');
-var isLength = require('is-length-x');
+const isNil = require('is-nil-x');
+const isFunction = require('is-function-x');
+const isLength = require('is-length-x');
 
 /**
  * Checks if value is array-like. A value is considered array-like if it's
