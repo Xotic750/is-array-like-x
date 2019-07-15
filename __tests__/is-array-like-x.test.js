@@ -1,31 +1,10 @@
-let isArrayLike;
-
-if (typeof module === 'object' && module.exports) {
-  require('es5-shim');
-  require('es5-shim/es5-sham');
-
-  if (typeof JSON === 'undefined') {
-    JSON = {};
-  }
-
-  require('json3').runInContext(null, JSON);
-  require('es6-shim');
-  const es7 = require('es7-shim');
-  Object.keys(es7).forEach(function(key) {
-    const obj = es7[key];
-
-    if (typeof obj.shim === 'function') {
-      obj.shim();
-    }
-  });
-  isArrayLike = require('../../index.js');
-} else {
-  isArrayLike = returnExports;
-}
+import isArrayLike from '../src/is-array-like-x';
 
 describe('basic tests', function() {
   it('should return `true` for array-like values', function() {
+    expect.assertions(1);
     (function() {
+      /* eslint-disable-next-line prefer-rest-params */
       const values = [arguments, [1, 2, 3], {0: 1, length: 1}, 'a'];
       const expected = values.map(function() {
         return true;
@@ -36,12 +15,13 @@ describe('basic tests', function() {
   });
 
   it('should return `false` for non-arrays', function() {
+    expect.assertions(13);
     const falsey = ['', 0, false, NaN, null, undefined];
     const generator = (function() {
       try {
-        // eslint-disable-next-line no-new-func
         return new Function('return function*(){}');
       } catch (ignore) {
+        /* eslint-disable-next-line no-void */
         return void 0;
       }
     })();
@@ -63,21 +43,24 @@ describe('basic tests', function() {
     expect(isArrayLike(/x/)).toBe(false);
 
     try {
-      // eslint-disable-next-line no-new-func
       const fat = new Function('return () => {return this;}');
       expect(isArrayLike(fat)).toBe(false);
-    } catch (ignore) {}
+    } catch (ignore) {
+      // empty
+    }
 
     try {
-      // eslint-disable-next-line no-new-func
       const gen = new Function('return function* idMaker(){}');
       expect(isArrayLike(gen)).toBe(false);
-    } catch (ignore) {}
+    } catch (ignore) {
+      // empty
+    }
 
     try {
-      // eslint-disable-next-line no-new-func
       const classes = new Function('"use strict"; return class MyClass {}');
       expect(isArrayLike(classes)).toBe(false);
-    } catch (ignore) {}
+    } catch (ignore) {
+      // empty
+    }
   });
 });
