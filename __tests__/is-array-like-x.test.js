@@ -4,7 +4,6 @@ describe('basic tests', function() {
   it('should return `true` for array-like values', function() {
     expect.assertions(1);
     (function() {
-      /* eslint-disable-next-line prefer-rest-params */
       const values = [arguments, [1, 2, 3], {0: 1, length: 1}, 'a'];
       const expected = values.map(function() {
         return true;
@@ -21,7 +20,6 @@ describe('basic tests', function() {
       try {
         return new Function('return function*(){}');
       } catch (ignore) {
-        /* eslint-disable-next-line no-void */
         return void 0;
       }
     })();

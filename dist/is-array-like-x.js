@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2015-2017",
-  "date": "2019-07-15T13:15:12.981Z",
+  "date": "2019-07-16T10:57:11.374Z",
   "describe": "",
   "description": "Determine if a value is array like.",
   "file": "is-array-like-x.js",
-  "hash": "613b6bb64276fe540b4d",
+  "hash": "b4ea16131187434bb19a",
   "license": "MIT",
-  "version": "2.0.1"
+  "version": "2.0.2"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -899,7 +899,7 @@ function trimRight2018(string) {
 }
 
 
-// CONCATENATED MODULE: ./node_modules/normalize-space-x/node_modules/trim-x/dist/trim-x.esm.js
+// CONCATENATED MODULE: ./node_modules/trim-x/dist/trim-x.esm.js
 
 
 /**
@@ -1273,35 +1273,6 @@ function toPrimitive(input, preferredType) {
 }
 
 
-// CONCATENATED MODULE: ./node_modules/trim-x/dist/trim-x.esm.js
-
-
-/**
- * This method removes whitespace from the left and right end of a string.
- * (ES2016).
- *
- * @param {string} [string] - The string to trim the whitespace from.
- * @throws {TypeError} If string is null or undefined or not coercible.
- * @returns {string} The trimmed string.
- */
-
-function trim_x_esm_trim2016(string) {
-  return trimLeft2016(trimRight2016(string));
-}
-/**
- * This method removes whitespace from the left and right end of a string.
- * (ES2018).
- *
- * @param {string} [string] - The string to trim the whitespace from.
- * @throws {TypeError} If string is null or undefined or not coercible.
- * @returns {string} The trimmed string.
- */
-
-function trim_x_esm_trim2018(string) {
-  return trimLeft2018(trimRight2018(string));
-}
-
-
 // CONCATENATED MODULE: ./node_modules/nan-x/dist/nan-x.esm.js
 /**
  * The constant NaN derived mathematically by 0 / 0.
@@ -1451,7 +1422,7 @@ function toNumber2016(argument) {
       return nan_x_esm;
     }
 
-    var trimmed = trim_x_esm_trim2016(value);
+    var trimmed = trim2016(value);
 
     if (trimmed !== value) {
       return toNumber2016(trimmed);
@@ -1488,7 +1459,7 @@ function toNumber2018(argument) {
       return nan_x_esm;
     }
 
-    var trimmed = trim_x_esm_trim2018(value);
+    var trimmed = trim2018(value);
 
     if (trimmed !== value) {
       return toNumber2018(trimmed);
