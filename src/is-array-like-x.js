@@ -9,6 +9,8 @@ import isLength from 'is-length-x';
  *
  * @param {*} value - The object to be tested.
  */
-export default function isArrayLike(value) {
+const isArrayLike = function isArrayLike(value) {
   return isNil(value) === false && isFunction(value, true) === false && isLength(value.length);
-}
+};
+
+export default isArrayLike;
