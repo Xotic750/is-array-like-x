@@ -1,6 +1,6 @@
 {
   "name": "is-array-like-x",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "description": "Determine if a value is array like.",
   "homepage": "https://github.com/Xotic750/is-array-like-x",
   "author": {
@@ -21,6 +21,7 @@
   ],
   "module": "dist/is-array-like-x.esm.js",
   "main": "dist/is-array-like-x.js",
+  "jsdelivr": "dist/is-array-like-x.min.js",
   "scripts": {
     "build:esm": "mkdirp dist && babel -s true --env-name esm src/is-array-like-x.js -o dist/is-array-like-x.esm.js",
     "build:base": "webpack --bail --progress --profile --colors",
@@ -48,9 +49,9 @@
     "url": "https://github.com/Xotic750/is-array-like-x/issues"
   },
   "dependencies": {
-    "is-function-x": "^4.0.21",
-    "is-length-x": "^3.0.17",
-    "is-nil-x": "^2.0.19"
+    "is-function-x": "^4.0.23",
+    "is-length-x": "^3.0.19",
+    "is-nil-x": "^2.0.21"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -88,7 +89,7 @@
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^22.13.6",
-    "eslint-plugin-jsdoc": "^15.7.1",
+    "eslint-plugin-jsdoc": "^15.7.2",
     "eslint-plugin-json": "^1.4.0",
     "eslint-plugin-lodash": "^5.1.0",
     "eslint-plugin-no-use-extend-native": "^0.4.1",
