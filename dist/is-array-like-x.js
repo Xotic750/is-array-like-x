@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2015-2017",
-  "date": "2019-07-24T16:35:48.506Z",
+  "date": "2019-07-25T22:09:53.791Z",
   "describe": "",
   "description": "Determine if a value is array like.",
   "file": "is-array-like-x.js",
   "hash": "2e6f0112c483369c46e3",
   "license": "MIT",
-  "version": "2.0.13"
+  "version": "2.0.14"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
