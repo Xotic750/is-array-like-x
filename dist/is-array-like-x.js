@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2015-2017",
-  "date": "2019-07-27T01:12:54.649Z",
+  "date": "2019-07-27T14:27:35.626Z",
   "describe": "",
   "description": "Determine if a value is array like.",
   "file": "is-array-like-x.js",
-  "hash": "2e6f0112c483369c46e3",
+  "hash": "46ce544ad69d5f0c1b0e",
   "license": "MIT",
-  "version": "2.0.16"
+  "version": "2.0.17"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -1296,8 +1296,6 @@ var binaryRadix = 2;
 var octalRadix = 8;
 var testCharsCount = 2;
 var to_number_x_esm_ERROR_MESSAGE = 'Cannot convert a Symbol value to a number';
-/** @type {NumberConstructor} */
-
 var to_number_x_esm_castNumber = testCharsCount.constructor;
 var pStrSlice = to_number_x_esm_ERROR_MESSAGE.slice;
 var binaryRegex = /^0b[01]+$/i;
