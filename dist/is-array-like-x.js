@@ -2,7 +2,7 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2015-2017",
-  "date": "2019-08-04T15:09:08.562Z",
+  "date": "2019-08-04T20:27:09.481Z",
   "describe": "",
   "description": "Determine if a value is array like.",
   "file": "is-array-like-x.js",
